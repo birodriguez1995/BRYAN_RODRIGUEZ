@@ -1,0 +1,85 @@
+﻿@page "/"
+@inject HttpClient Http
+@inject NavigationManager Navigation
+@using Proyecto_Fullstack.Shared
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Components.Authorization
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@inject IJSRuntime JSRuntime
+@attribute [Authorize]
+
+<PageTitle>Tareas</PageTitle>
+
+<h3>Tareas</h3>
+
+@if (tareas == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Titulo</th>
+                <th>Descripcion</th>
+                <th>Fecha Creacion</th>
+                <th>Fecha Vencimiento</th>
+                <th>Completada</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var tarea in tareas)
+            {
+                <tr>
+                    <td>@tarea.Titulo</td>
+                    <td>@tarea.Descripcion</td>
+                    <td>@tarea.FechaCreacion.ToShortDateString()</td>
+                    <td>@tarea.FechaVencimiento.ToShortDateString()</td>
+                    <td>@tarea.Completada</td>
+                    <td>
+                        <button class="btn btn-primary" @onclick="() => EditarTarea(tarea.ID)">Editar</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-danger" @onclick="() => EliminarTarea(tarea.ID)">Eliminar</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <button class="btn btn-success" @onclick="NuevaTarea">Nueva Tarea</button>
+}
+
+@code {
+    private List<TareaUsuario> tareas = new List<TareaUsuario>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        tareas = await Http.GetFromJsonAsync<List<TareaUsuario>>("api/tarea");
+    }
+
+    private void NuevaTarea()
+    {
+        Navigation.NavigateTo("/tareas/nueva");
+    }
+
+    private void EditarTarea(int id)
+    {
+        Navigation.NavigateTo($"/tareas/editar/{id}");
+    }
+
+    private async Task EliminarTarea(int id)
+    {
+        var response = await Http.DeleteAsync($"api/tarea/{id}");
+        if (response.IsSuccessStatusCode)
+        {
+            tareas = await Http.GetFromJsonAsync<List<TareaUsuario>>("api/tarea");
+        }
+        else
+        {
+            Console.WriteLine("Error al eliminar la tarea: " + response.ReasonPhrase);
+        }
+    }
+}

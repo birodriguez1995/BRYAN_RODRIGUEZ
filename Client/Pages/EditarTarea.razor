@@ -1,0 +1,74 @@
+﻿@page "/tareas/editar/{id:int}"
+@using Proyecto_Fullstack.Shared
+@inject HttpClient Http
+@inject NavigationManager Navigation
+
+<PageTitle>Editar Tarea</PageTitle>
+
+<h3>Editar Tarea</h3>
+
+<EditForm Model="@tarea" OnValidSubmit="ActualizarTarea">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="form-group">
+        <label for="Titulo">Titulo</label>
+        <InputText id="Titulo" class="form-control" @bind-Value="tarea.Titulo" />
+        <ValidationMessage For="@(() => tarea.Titulo)" />
+    </div>
+    <div class="form-group">
+        <label for="Descripcion">Descripcion</label>
+        <InputText id="Descripcion" class="form-control" @bind-Value="tarea.Descripcion" />
+        <ValidationMessage For="@(() => tarea.Descripcion)" />
+    </div>
+    <div class="form-group">
+        <label for="FechaVencimiento">Fecha Vencimiento</label>
+        <InputDate id="FechaVencimiento" class="form-control" @bind-Value="tarea.FechaVencimiento" />
+        <ValidationMessage For="@(() => tarea.FechaVencimiento)" />
+    </div>
+    <div class="form-group">
+        <label for="Completada">Completada</label>
+        <InputCheckbox id="Completada" @bind-Value="tarea.Completada" />
+        <ValidationMessage For="@(() => tarea.Completada)" />
+    </div>
+
+    <button type="submit" class="btn btn-success">Guardar</button>
+    <button type="button" class="btn btn-secondary" @onclick="Cancelar">Cancelar</button>
+</EditForm>
+
+@code {
+    [Parameter]
+    public int id { get; set; }
+
+    private TareaUsuario tarea = new TareaUsuario();
+
+    protected override async Task OnInitializedAsync()
+    {
+        tarea = await Http.GetFromJsonAsync<TareaUsuario>($"api/tarea/{id}");
+    }
+
+    private async Task ActualizarTarea()
+    {
+        try
+        {
+            var response = await Http.PutAsJsonAsync($"api/tarea/{id}", tarea);
+            if (response.IsSuccessStatusCode)
+            {
+                Navigation.NavigateTo("/");
+            }
+            else
+            {
+                Console.WriteLine("Error al actualizar la tarea: " + response.ReasonPhrase);
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Excepción al actualizar la tarea: " + ex.Message);
+        }
+    }
+
+    private void Cancelar()
+    {
+        Navigation.NavigateTo("/");
+    }
+}

@@ -1,0 +1,77 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = Proyecto_Fullstack.Client
+build_property.RootNamespace = Proyecto_Fullstack.Client
+build_property.ProjectDir = C:\repos\Proyecto_Fullstack\Client\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\repos\Proyecto_Fullstack\Client
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/repos/Proyecto_Fullstack/Client/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/repos/Proyecto_Fullstack/Client/Pages/Counter.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/repos/Proyecto_Fullstack/Client/Pages/EditarTarea.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdGFyVGFyZWEucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/repos/Proyecto_Fullstack/Client/Pages/FetchData.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/repos/Proyecto_Fullstack/Client/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/repos/Proyecto_Fullstack/Client/Pages/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/repos/Proyecto_Fullstack/Client/Pages/LoginDisplay.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW5EaXNwbGF5LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/repos/Proyecto_Fullstack/Client/Pages/Logout.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9nb3V0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/repos/Proyecto_Fullstack/Client/Pages/NuevaTarea.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTnVldmFUYXJlYS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/repos/Proyecto_Fullstack/Client/Pages/Register.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0ZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/repos/Proyecto_Fullstack/Client/Pages/Tarea.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGFyZWEucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/repos/Proyecto_Fullstack/Client/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/repos/Proyecto_Fullstack/Client/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/repos/Proyecto_Fullstack/Client/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-opmtd06yzd
+
+[C:/repos/Proyecto_Fullstack/Client/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-hh17ymlqku
