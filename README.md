@@ -4,6 +4,7 @@
 ![image](https://github.com/birodriguez1995/BRYAN_RODRIGUEZ/assets/32909350/ba29c86e-145d-4456-9b15-233cf5a5312c)
 Inicio
 ![image](https://github.com/birodriguez1995/BRYAN_RODRIGUEZ/assets/32909350/92387315-a863-4a00-b750-ae86ef6a878c)
+![image](https://github.com/birodriguez1995/BRYAN_RODRIGUEZ/assets/32909350/f266d81d-6ae2-4a8b-8b51-969fe63b67ee)
 Nueva Tarea
 ![image](https://github.com/birodriguez1995/BRYAN_RODRIGUEZ/assets/32909350/ef5d4bf8-b622-435d-889e-9edcbef5012e)
 ![image](https://github.com/birodriguez1995/BRYAN_RODRIGUEZ/assets/32909350/75380f31-c086-4492-89dc-6bc3a6510073)
